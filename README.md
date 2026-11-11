@@ -1,5 +1,7 @@
 # Vehicle Framework
 
+<img src="media/icon.png" alt="Vehicle Framework icon" width="128" height="128">
+
 Shared foundation for additional vehicles.
 
 ## Install
