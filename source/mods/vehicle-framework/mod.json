@@ -1,0 +1,28 @@
+{
+  "id": "vehicle-framework",
+  "kind": "native",
+  "version": "0.2.1",
+  "feature_dependencies": [],
+  "gameplay": true,
+  "display_name": "Vehicle Framework",
+  "play_help": [
+    "Shared registration, garage, presentation, driver and physics routing for new vehicle mods. Adds no vehicles on its own."
+  ],
+  "provides": {
+    "vehicle-framework.vehicles": {
+      "abi": 1,
+      "size": 48,
+      "limits": {
+        "max_definitions": 64,
+        "max_vehicle_id": 85
+      }
+    },
+    "vehicle-framework.autonomous": {
+      "abi": 1,
+      "size": 48,
+      "limits": {
+        "max_cars": 64
+      }
+    }
+  }
+}
