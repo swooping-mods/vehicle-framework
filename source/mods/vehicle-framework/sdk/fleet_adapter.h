@@ -11,7 +11,8 @@ static struct {
 } mf;
 static inline int mf_equal(PTR a, PTR b) {
   int ok=1; void *args[]={a,b}; PTR value=call(mf.equal,0,args,&ok);
-  return ok&&value&&*(unsigned char *)unbox(value);
+  PTR data=ok&&value?unbox(value):0;
+  return data&&*(unsigned char *)data;
 }
 static inline int mf_read(PTR owned, MoonFleetRecord *r) {
   if(!owned||!r)return 0;
@@ -24,15 +25,19 @@ static inline int mf_read(PTR owned, MoonFleetRecord *r) {
   *r=value;return 1;
 }
 static inline int mf_occupied(PTR storage,int model,int *occupied) {
-  if(!storage||model<0||!occupied||!mf.seats||!mf.taken)return 0;
+  if(!occupied)return 0;
+  *occupied=1;
+  if(!storage||model<0||!mf.seats||!mf.taken)return 0;
   int ok=1;void *args[]={&model};PTR box=call(mf.seats,0,args,&ok);
-  int count=box?*(int *)unbox(box):-1;
+  PTR data=ok&&box?unbox(box):0;
+  int count=data?*(int *)data:-1;
   if(!ok||count<0||count>16)return 0;
   *occupied=0;
   for(int i=0;i<count;i++){
     void *seat[]={storage,&i};PTR taken=call(mf.taken,0,seat,&ok);
-    if(!ok||!taken)return 0;
-    if(*(unsigned char *)unbox(taken)){*occupied=1;break;}
+    data=ok&&taken?unbox(taken):0;
+    if(!data){*occupied=1;return 0;}
+    if(*(unsigned char *)data){*occupied=1;break;}
   }
   return 1;
 }
@@ -44,12 +49,15 @@ static inline int mf_snapshot(PTR world,MoonFleetSnapshot *s) {
   if(!s)return 0;
   mf_close(s);if(!world)return 0;int ok=1;
   DRoot collection=dhold(call(mf.owned,world,0,&ok));PTR items=dget(collection);
-  int count=items?integer(get_method(object_class(items),"get_Count",0),items,&ok):-1;
+  PTR boxed=items?call(get_method(object_class(items),"get_Count",0),items,0,&ok):0;
+  PTR data=ok&&boxed?unbox(boxed):0;
+  int count=data?*(int *)data:-1;
   if(!ok||count<0||count>(int)MOON_FLEET_LIMIT){ddrop(&collection);return 0;}
   PTR array=mf.new_array(find_class("MoonCleaners","MoonOwnedVehicle"),(U64)count);
   if(!array){ddrop(&collection);return 0;}
-  s->array=dhold(array);int zero=0;void *args[]={array,&zero};
-  if(s->array)call(get_method(object_class(items),"CopyTo",2),items,args,&ok);else ok=0;
+  s->array=dhold(array);array=dget(s->array);
+  int zero=0;void *args[]={array,&zero};
+  if(array)call(get_method(object_class(items),"CopyTo",2),items,args,&ok);else ok=0;
   ddrop(&collection);
   if(!ok){mf_close(s);return 0;}s->count=(unsigned)count;return 1;
 }
@@ -66,7 +74,17 @@ static inline PTR mf_live(PTR world,PTR storage,int *ok) {
   PTR dictionary=0,live=0;
   if(!world||!storage){*ok=0;return 0;}
   field_value(world,mf.live_dictionary,&dictionary);
-  if(dictionary){void *args[]={storage,&live};call(get_method(object_class(dictionary),"TryGetValue",2),dictionary,args,ok);}
+  if(!dictionary){*ok=0;return 0;}
+  void *args[]={storage,&live};
+  PTR result=call(get_method(object_class(dictionary),"TryGetValue",2),dictionary,args,ok);
+  PTR data=*ok&&result?unbox(result):0;
+  if(!data){*ok=0;return 0;}
+  /* An unavailable or inconsistent lookup is never evidence of a parked car. */
+  int found=*(unsigned char *)data!=0;
+  if(found!=(live!=0)){*ok=0;return 0;}
+  if(!found)return 0;
+  PTR actual=call(mf.live_storage,live,0,ok);
+  if(!*ok||!actual||!mf_equal(actual,storage)){*ok=0;return 0;}
   return live;
 }
 static inline PTR mf_vehicle_storage(PTR vehicle,int *ok) {

@@ -1,133 +1,189 @@
 {
   "schema": "mod-source-hashes/v1",
+  "source_sync": {
+    "workshop_revision": "ca32bbf79ce0840d5166a232bdb3a9fdcd761254",
+    "source_version": "0.2.1",
+    "payload_version": "0.2.1",
+    "compiled": false,
+    "gameplay_requalified": false,
+    "production_closure_complete": true,
+    "deferred_test_fixture_gaps": []
+  },
   "source_files": {
     "mods/map-control-framework/sdk/map_controls.h": {
+      "source_sha256": "1014447d4b8784c7d7f356f750a998935fbb0a9a1a259b57cf714494631c571f",
       "export_sha256": "1014447d4b8784c7d7f356f750a998935fbb0a9a1a259b57cf714494631c571f"
     },
     "mods/vehicle-framework/autonomous_runtime.h": {
+      "source_sha256": "b397a8a3f9022e32b850215f94cd4a299c635ed3b40d5bb590b7e9310171a21a",
       "export_sha256": "b397a8a3f9022e32b850215f94cd4a299c635ed3b40d5bb590b7e9310171a21a"
     },
     "mods/vehicle-framework/berth.h": {
+      "source_sha256": "b32b1a624778b68337b4408dadf074ce24191f7a2214f1f7514a544d29c8ebbf",
       "export_sha256": "b32b1a624778b68337b4408dadf074ce24191f7a2214f1f7514a544d29c8ebbf"
     },
     "mods/vehicle-framework/catalog_registry.h": {
+      "source_sha256": "c99064c6dc1bc9a092151d71ae0185f5e6f66732df251e799f34321e2a0b03f8",
       "export_sha256": "c99064c6dc1bc9a092151d71ae0185f5e6f66732df251e799f34321e2a0b03f8"
     },
     "mods/vehicle-framework/definitions.h": {
+      "source_sha256": "482b0f644f7866db0e8c9bedeba730548f983baf2174342f2ed218bfb3b3aadd",
       "export_sha256": "482b0f644f7866db0e8c9bedeba730548f983baf2174342f2ed218bfb3b3aadd"
     },
     "mods/vehicle-framework/dispatch.h": {
+      "source_sha256": "11c118ede0124c61383db04dedd30b033290852e0a864cfd77d60132b37c7035",
       "export_sha256": "11c118ede0124c61383db04dedd30b033290852e0a864cfd77d60132b37c7035"
     },
     "mods/vehicle-framework/garage_ui.h": {
+      "source_sha256": "d7364a60728ed037dcbd1295eaedc13b738cd3547e6ddadf6f3ceb43cd65b6fd",
       "export_sha256": "d7364a60728ed037dcbd1295eaedc13b738cd3547e6ddadf6f3ceb43cd65b6fd"
     },
     "mods/vehicle-framework/hover_probe_cache.h": {
+      "source_sha256": "3dbb2d5ae6c4e0ccc4535c51d53eda84db1f3f133bd91c5f5c47c33a8b7216f7",
       "export_sha256": "3dbb2d5ae6c4e0ccc4535c51d53eda84db1f3f133bd91c5f5c47c33a8b7216f7"
     },
     "mods/vehicle-framework/hover_runtime.h": {
+      "source_sha256": "fa60c802e7d72a39d11bd05a0f070285e6553dca010dc304e68e4aea0ec0f659",
       "export_sha256": "fa60c802e7d72a39d11bd05a0f070285e6553dca010dc304e68e4aea0ec0f659"
     },
     "mods/vehicle-framework/instances.h": {
+      "source_sha256": "0ff03f5de32f5ac8cfe1523e2511cd7cd2b96410038d1ed773be50b17c6de7e2",
       "export_sha256": "0ff03f5de32f5ac8cfe1523e2511cd7cd2b96410038d1ed773be50b17c6de7e2"
     },
     "mods/vehicle-framework/mod.c": {
+      "source_sha256": "9a6e65d9eb87e916d926a09b34e172e484364b415442e10aee65a3581a238002",
       "export_sha256": "9a6e65d9eb87e916d926a09b34e172e484364b415442e10aee65a3581a238002"
     },
     "mods/vehicle-framework/mod.json": {
+      "source_sha256": "124b23fbcee57c60e3b62b101aad153f0d03c9d652be3370761b36330df9f563",
       "export_sha256": "91d9db7ac6ffe100039331672ae17d0c701ff8e7c8ea6b23ec69efbe468ca493"
     },
     "mods/vehicle-framework/sdk/autonomous.h": {
+      "source_sha256": "410e1781ade0a9270edbe94592e639fad63e3f41aec4621d10991b8c8f867acf",
       "export_sha256": "410e1781ade0a9270edbe94592e639fad63e3f41aec4621d10991b8c8f867acf"
     },
     "mods/vehicle-framework/sdk/bootstrap.h": {
+      "source_sha256": "b5891724b60f172d1f8c79b7ee7f85657619d68e7eb78e9525dee4d8c0d0cb7f",
       "export_sha256": "b5891724b60f172d1f8c79b7ee7f85657619d68e7eb78e9525dee4d8c0d0cb7f"
     },
     "mods/vehicle-framework/sdk/client.h": {
+      "source_sha256": "a41fbdd4630e13f9f8cb4beec15d18e795b07b7c00fbb7decbd246524e069abc",
       "export_sha256": "a41fbdd4630e13f9f8cb4beec15d18e795b07b7c00fbb7decbd246524e069abc"
     },
     "mods/vehicle-framework/sdk/fleet.h": {
+      "source_sha256": "9520decf53e7eb5d5395f2c4ee84b8dfd7b02dad228d738e9edc7f082c95a4ae",
       "export_sha256": "9520decf53e7eb5d5395f2c4ee84b8dfd7b02dad228d738e9edc7f082c95a4ae"
     },
     "mods/vehicle-framework/sdk/fleet_adapter.h": {
-      "export_sha256": "8d8ad52a00e892e9a883f404868b1ad7ebc69c233625b4037ef5d11b741c33c4"
+      "source_sha256": "7ef474fb3b1098e4ad275009b5f1ca44214ae6ce83a13e3ee8eeba27284b8c2c",
+      "export_sha256": "7ef474fb3b1098e4ad275009b5f1ca44214ae6ce83a13e3ee8eeba27284b8c2c"
     },
     "mods/vehicle-framework/sdk/hover.h": {
+      "source_sha256": "e82d9e293447051850e99d2dacaed7e83fdbe0eaaaf0c3b826940f9fe67c3a4d",
       "export_sha256": "e82d9e293447051850e99d2dacaed7e83fdbe0eaaaf0c3b826940f9fe67c3a4d"
     },
     "mods/vehicle-framework/sdk/hover_body.h": {
+      "source_sha256": "768bbc2bc7d174a2fa3db9220a093ce1a98993bd352a64cb556f06e7c4354663",
       "export_sha256": "768bbc2bc7d174a2fa3db9220a093ce1a98993bd352a64cb556f06e7c4354663"
     },
     "mods/vehicle-framework/sdk/hover_core.h": {
+      "source_sha256": "f620468b03369ffbc2dd23f676676e78fe5e4ff852416d53191124429e2fb69d",
       "export_sha256": "f620468b03369ffbc2dd23f676676e78fe5e4ff852416d53191124429e2fb69d"
     },
     "mods/vehicle-framework/sdk/hover_input.h": {
+      "source_sha256": "e614e63969f0e560f9666b8565894137f6965b653d78a3d13555b95b2e78b113",
       "export_sha256": "e614e63969f0e560f9666b8565894137f6965b653d78a3d13555b95b2e78b113"
     },
     "mods/vehicle-framework/sdk/scene_adapter.h": {
+      "source_sha256": "f1871eab5561c8429455c4d879041261d819a6af6d900673cd3a257432b15626",
       "export_sha256": "f1871eab5561c8429455c4d879041261d819a6af6d900673cd3a257432b15626"
     },
     "mods/vehicle-framework/sdk/static_model.h": {
+      "source_sha256": "30ed1600568af9de2fd17b4753099cf1706c1d887bd92df9e3209d24c14b8ea4",
       "export_sha256": "30ed1600568af9de2fd17b4753099cf1706c1d887bd92df9e3209d24c14b8ea4"
     },
     "mods/vehicle-framework/sdk/unity.h": {
+      "source_sha256": "a61e934b71515c755714e8b2ea84501b7510f2803af080f563a99481a3e7390a",
       "export_sha256": "a61e934b71515c755714e8b2ea84501b7510f2803af080f563a99481a3e7390a"
     },
     "mods/vehicle-framework/sdk/vehicle.h": {
+      "source_sha256": "bd4f7140cdac1131a7b29013892389084db0bcaddf3d4aa5cc3b21b027bbcd48",
       "export_sha256": "bd4f7140cdac1131a7b29013892389084db0bcaddf3d4aa5cc3b21b027bbcd48"
     },
+    "mods/vehicle-framework/vehicle_reads.h": {
+      "source_sha256": "cddcf422504e2bb4a2eeddd41bffbaa6af19023b2de70020e66f63c5af0dacfe",
+      "export_sha256": "cddcf422504e2bb4a2eeddd41bffbaa6af19023b2de70020e66f63c5af0dacfe"
+    },
     "runtime/native/gameplay.h": {
-      "export_sha256": "7676362469a7972f54f9c7304d41d32396b4f81cc9a9f9935983c54b90cb061d"
+      "source_sha256": "07418f6e84e7c9393e804d49e680f6537ab99ae6a164dc046cdceaedc7bc5f13",
+      "export_sha256": "07418f6e84e7c9393e804d49e680f6537ab99ae6a164dc046cdceaedc7bc5f13"
     },
     "runtime/native/hook_context.h": {
+      "source_sha256": "28f6c6502f3b4d6e8ae02c06e60b6d3b7f1b8674d0a5f20ac42664ea3133d016",
       "export_sha256": "28f6c6502f3b4d6e8ae02c06e60b6d3b7f1b8674d0a5f20ac42664ea3133d016"
     },
     "runtime/native/hook_engine.h": {
+      "source_sha256": "2cea82d754c1792bc3eddfba10261c7de7eb0a33316cc5d1aa28a99ee78882df",
       "export_sha256": "2cea82d754c1792bc3eddfba10261c7de7eb0a33316cc5d1aa28a99ee78882df"
     },
     "runtime/native/input.h": {
+      "source_sha256": "75e2f0cf8b8df54256a647d3f6b42d90b6ae2fcc48268ba73b974fa7cbc6c6bd",
       "export_sha256": "75e2f0cf8b8df54256a647d3f6b42d90b6ae2fcc48268ba73b974fa7cbc6c6bd"
     },
     "runtime/native/services.h": {
+      "source_sha256": "1178e09c77f30f53bbccbfbacf8771e5faad1cf79753703d90dfd0a1e0fbadeb",
       "export_sha256": "1178e09c77f30f53bbccbfbacf8771e5faad1cf79753703d90dfd0a1e0fbadeb"
     },
     "runtime/native/vehicle_adapter.h": {
+      "source_sha256": "a670656028a7cc76e8a08fb85d8bba2124c46348466ad5496c74314686ffafa0",
       "export_sha256": "a670656028a7cc76e8a08fb85d8bba2124c46348466ad5496c74314686ffafa0"
     },
     "runtime/native/vehicle_input.h": {
+      "source_sha256": "52540cfc41e799c812f68568d4031fdd96fc95a72929b1366bab37b2fd961232",
       "export_sha256": "52540cfc41e799c812f68568d4031fdd96fc95a72929b1366bab37b2fd961232"
     },
     "runtime/sdk/context.h": {
+      "source_sha256": "6c84145cc761550c4943aa10c52242a538e92243f79a1b20c65b6a4ef9e82605",
       "export_sha256": "6c84145cc761550c4943aa10c52242a538e92243f79a1b20c65b6a4ef9e82605"
     },
     "runtime/sdk/hooks.h": {
+      "source_sha256": "7c006f1254dd6a130f56dac499ba8196fb84ee4883443ee4f12d601534df56ec",
       "export_sha256": "7c006f1254dd6a130f56dac499ba8196fb84ee4883443ee4f12d601534df56ec"
     },
     "runtime/sdk/input.h": {
+      "source_sha256": "33739269793e88776c6f611a05e19ade01bd8326a115d38a0eec71ff64344ac8",
       "export_sha256": "33739269793e88776c6f611a05e19ade01bd8326a115d38a0eec71ff64344ac8"
     },
     "runtime/sdk/input_host.h": {
+      "source_sha256": "8d3f59ed3e21bdb7c7528737dd263b234c65e05b481a142eaf5f33f70604e0cb",
       "export_sha256": "8d3f59ed3e21bdb7c7528737dd263b234c65e05b481a142eaf5f33f70604e0cb"
     },
     "runtime/sdk/input_registry.h": {
+      "source_sha256": "53cf344e49ff195b3f0a4f35078d6dde84693a895eb4030734d218cc692bc7fe",
       "export_sha256": "53cf344e49ff195b3f0a4f35078d6dde84693a895eb4030734d218cc692bc7fe"
     },
     "runtime/sdk/native_adapters/raycast_layout.h": {
+      "source_sha256": "7ba81c9a223b6dc8a7172650ba12dde0a3a5fd99f3844e46bbf1a53f5d1cf25a",
       "export_sha256": "7ba81c9a223b6dc8a7172650ba12dde0a3a5fd99f3844e46bbf1a53f5d1cf25a"
     },
     "runtime/sdk/native_adapters/unity.h": {
-      "export_sha256": "fc1ed6c1d70f0de9c24515c50b2b53eaaf45f5942ce71a7c9e1c2c6548b0c2aa"
+      "source_sha256": "092810650b7383e5fc4a2876c9c411db578069ee79da536c57569cd47910b3d8",
+      "export_sha256": "092810650b7383e5fc4a2876c9c411db578069ee79da536c57569cd47910b3d8"
     },
     "runtime/sdk/scene/static_model.h": {
+      "source_sha256": "59e47626fad59c19599936aa83ccfc1c98daccfdafccad1ccd276ed0dd2e41d6",
       "export_sha256": "59e47626fad59c19599936aa83ccfc1c98daccfdafccad1ccd276ed0dd2e41d6"
     },
     "runtime/sdk/services.h": {
+      "source_sha256": "72de584c98cf0ca6367f5decd4416c78fa4eeea44b4b48401d0737a44b2c7a2b",
       "export_sha256": "72de584c98cf0ca6367f5decd4416c78fa4eeea44b4b48401d0737a44b2c7a2b"
     },
     "runtime/sdk/services_client.h": {
+      "source_sha256": "17f670371f5798457301b14c046daa99632c9685cc2c5f78921c3fe53d095479",
       "export_sha256": "17f670371f5798457301b14c046daa99632c9685cc2c5f78921c3fe53d095479"
     },
     "runtime/sdk/vehicle_input.h": {
+      "source_sha256": "6af332b456ff9fb74e96a6e963a8cf9627bd51a8edca55f07b6e5a829b9da790",
       "export_sha256": "6af332b456ff9fb74e96a6e963a8cf9627bd51a8edca55f07b6e5a829b9da790"
     }
   }
